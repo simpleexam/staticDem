@@ -15,10 +15,14 @@ namespace staticDem
             Company com4 = new Company();
             Company com5 = new Company();
 
-            Console.WriteLine($"количество зарегестрированных компаний: {Company.countOfCompanies}");
+            //Console.WriteLine($"количество зарегестрированных компаний: {Company.countOfCompanies}");
 
-            Console.WriteLine($"количество частных компаний: {Company.countOfPrivateCompanies}\n" +
-                $"количество государственных компаний: {Company.countOfStateOwnedCompanies}");
+            //Console.WriteLine($"количество частных компаний: {Company.countOfPrivateCompanies}\n" +
+            //    $"количество государственных компаний: {Company.countOfStateOwnedCompanies}");
+
+            Console.WriteLine(com3);
+            com3.SetCapital(16_605_000M);
+            com3.Capitalization(14);
 
 
 

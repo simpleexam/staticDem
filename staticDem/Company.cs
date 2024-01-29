@@ -96,6 +96,27 @@ namespace staticDem
             countOfCompanies++;
         }
 
+        public override string ToString()
+        {
+            return $"{Title}\n" +
+                $"юридические адрес: {Addres}\n" +
+                $"ОКПО: {Ogrn}\n" +
+                $"ИНН: {Inn}\n" +
+                $"Тип компании: {(Type==TypeOfCompany.StateOwned ? "государственная" : "частная")}\n";
+        }
+
+        public void SetCapital(decimal summ)
+        {
+            _capital = summ;
+            Console.WriteLine("установлена сумма уставного капитала: "+_capital);
+        }
+        public void Capitalization (int persent)
+        {
+            _capital = _capital + _capital*persent/100;
+            Console.WriteLine($"после капитализации на {persent}% уставной капитал составил {_capital}");
+        }
+
+
         /*
          *метод создания уставного капистала - принимает decimal параметр - начальную сумму уставного капитала
          *увеличивает поле _capinal на значение параметра. выводит сообщение о утановлении начального капитала
